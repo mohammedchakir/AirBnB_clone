@@ -53,6 +53,7 @@ class TestHBNBCommand(unittest.TestCase):
 Documented commands (type help <topic>):
 ========================================
 EOF  all  count  create  destroy  help  quit  show  update
+
 """
         self.assertEqual(s, f.getvalue())
 
