@@ -224,12 +224,12 @@ class TestFileStorage(unittest.TestCase):
         key = "{}.{}".format(type(o).__name__, o.id)
         storage.save()
         self.assertTrue(os.path.isfile(FileStorage._FileStorage__file_path))
-        d = {key: o.to_dict()}
+        res = {key: o.to_dict()}
         with open(FileStorage._FileStorage__file_path,
                   "r", encoding="utf-8") as f:
-            self.assertEqual(len(f.read()), len(json.dumps(d)))
+            self.assertEqual(len(f.read()), len(json.dumps(res)))
             f.seek(0)
-            self.assertEqual(json.load(f), d)
+            self.assertEqual(json.load(f), res)
 
     def test_5_save_base_model(self):
         """Conducts tests for the save() method in the BaseModel class."""

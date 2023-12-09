@@ -8,6 +8,7 @@ import uuid
 from models import storage
 from datetime import datetime
 
+
 class BaseModel:
 
     """ This class serves as base model with common attributes and methods."""
@@ -38,8 +39,8 @@ class BaseModel:
     def __str__(self):
         """Returns a string representation of the BaseModel instance."""
 
-        return "[{}] ({}) {}".\
-            format(type(self).__name__, self.id, self.__dict__)
+        return "[{}] ({}) {}".format(
+                type(self).__name__, self.id, self.__dict__)
 
     def save(self):
         """

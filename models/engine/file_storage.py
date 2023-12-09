@@ -9,6 +9,7 @@ import os
 import json
 import datetime
 
+
 class FileStorage:
 
     """
@@ -36,8 +37,8 @@ class FileStorage:
         "__file_path.
         """
         with open(FileStorage.__file_path, "w", encoding="utf-8") as f:
-            d = {k: v.to_dict() for k, v in FileStorage.__objects.items()}
-            json.dump(d, f)
+            res = {k: v.to_dict() for k, v in FileStorage.__objects.items()}
+            json.dump(res, f)
 
     def classes(self):
         """
