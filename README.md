@@ -178,6 +178,6 @@ The recognizable `commands` by the interpreter are the following:
 
 
 -----------------
-## Collaborators:
+## Author's:
 
 [MOHAMMED CHAKIR](https://github.com/mohammedchakir) & [SALEH ELMOUINY](https://github.com/Elmouinysaleh)
