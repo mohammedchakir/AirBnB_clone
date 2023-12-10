@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
-This module defines HBNBCommand, the entry
-point of the command interpreter
+Module containing the HBNBCommand class for the command interpreter.
 """
 
 import cmd
@@ -83,7 +82,7 @@ class HBNBCommand(cmd.Cmd):
         return True
 
     def do_quit(self, line):
-        """Exits the program.
+        """Quit command to exit the program.
         """
         return True
 
@@ -214,7 +213,7 @@ class HBNBCommand(cmd.Cmd):
                     try:
                         value = cast(value)
                     except ValueError:
-                        pass  # fine, stay a string then
+                        pass
                 setattr(storage.all()[key], attribute, value)
                 storage.all()[key].save()
 
