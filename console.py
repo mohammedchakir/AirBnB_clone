@@ -110,7 +110,7 @@ class HBNBCommand(cmd.Cmd):
                 k for k in storage.all() if k.startswith(
                     words[0] + '.')]
             print(len(matches))
-    
+
     def default(self, line):
         """Catch comds if nothing else matches then."""
         # print("DEF:::", line)
@@ -169,7 +169,7 @@ class HBNBCommand(cmd.Cmd):
                         value = attributes[attribute](value)
                     setattr(storage.all()[key], attribute, value)
                 storage.all()[key].save()
-    
+
     def do_update(self, line):
         """Updates an instance by adding or updating attribute.
         """
